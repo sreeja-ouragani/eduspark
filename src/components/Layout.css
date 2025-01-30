@@ -1,0 +1,214 @@
+/* Background image for the entire app */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative;  /* Positioning context for pseudo-element */
+    background-image:url('../assets/bgfull.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;  /* Full height of the screen */
+}
+
+/* Create an overlay for the background image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;  /* Inherit the background image */
+    opacity: 0.3;  /* Decrease opacity (increase transparency) */
+    z-index: -1;  /* Keep the overlay behind the content */
+}
+
+
+/* Layout container styles */
+.layout-container {
+    display: flex;
+    min-height: 100vh; /* Full screen height */
+    background-color: transparent; /* Transparent to show default background */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: relative; /* This is important for the absolute positioning of the dropdown */
+    width: 150px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #215c3b; /* Green color */
+    text-align: center;
+    
+}
+
+/* Navigation links and styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    margin-bottom: 20px;
+    text-align: center;  /* Center the text and icon */
+    padding: 20px;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #ee0808;  /* Red color for text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;  /* Smaller text */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;  /* White text on hover */
+    background-color: #146939;  /* Green background on hover */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Icons */
+a svg {
+    font-size: 50px;  /* Bigger icons */
+    color: #ff6347;  /* Tomato red for icons */
+    margin-bottom: 10px;  /* Space between icon and text */
+    transition: color 0.3s ease;
+}
+
+/* Hover effects on the icons */
+a:hover svg {
+    color: #fff;  /* White icons on hover */
+}
+
+/* Text under icons */
+a span {
+    font-size: 12px;  /* Smaller text under the icons */
+    font-weight: bold;
+    color: #ff6347;  /* Tomato red for text */
+    text-transform: capitalize;  /* Capitalize text */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for text */
+a:hover span {
+    color: #fff;  /* White text under the icon on hover */
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 160px; /* Space for the sidebar */
+    padding: 20px;
+    flex-grow: 1;
+    background-color: transparent; /* Transparent background for content */
+    color: #ebe4e4;
+    overflow-y: auto; /* Allows scrolling if content exceeds screen height */
+}
+
+/* For smaller screens, adjust sidebar width */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 120px;  /* Smaller sidebar for smaller screens */
+    }
+
+    .main-content {
+        margin-left: 130px; /* Adjust content margin */
+    }
+}
+
+/* For mobile view, sidebar can be hidden or collapsible */
+@media (max-width: 480px) {
+    .sidebar {
+        display: none;  /* Hide sidebar on very small screens */
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+/* Logo container styles */
+.logo {
+    display: flex;
+    align-items: center; /* Align image and text horizontally */
+    justify-content: center; /* Center the logo within the sidebar */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #215c3b; /* Green color */
+    text-align: center;
+    gap: 10px; /* Space between image and text */
+}
+
+/* Logo image styling */
+.logo img {
+    width: 50px; /* Adjust logo size */
+    height: 50px;
+    border-radius: 50%; /* Makes the logo image rounded */
+    border: 2px solid #215c3b; /* Optional: border around the logo */
+    object-fit: cover; /* Ensures the image fits within the circle */
+}
+.profile-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color:#ff6347;
+    padding: 10px;
+    margin-top: auto;
+    position: relative;  /* Ensure dropdown is positioned relative to this */
+  }
+  
+  .profile-icon span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    bottom: 0; /* Adjust this to make the dropdown appear right above the profile icon */
+    left: 200px;  /* Position horizontally in the center */
+    transform: translateX(-50%);  /* Center the dropdown */
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .profile-dropdown ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .profile-dropdown li {
+    padding: 10px;
+  }
+  
+  .profile-dropdown li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  
+  .profile-dropdown li a:hover {
+    background-color: #f0f0f0;
+  }

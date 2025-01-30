@@ -1,0 +1,42 @@
+.lessons-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full viewport height */
+    padding: 20px;           /* Some padding for spacing */
+  }
+  
+  .lessons-cards {
+    display: flex;
+    flex-direction: column;  /* Stack cards vertically */
+    align-items: center;     /* Center cards horizontally */
+    justify-content: space-evenly; /* Evenly space the cards */
+    width: 80%;              /* Make the cards container take up most of the space */
+    max-width: 800px;        /* Set a max width to prevent it from growing too large */
+  }
+  
+  .lesson-card {
+    background: linear-gradient(135deg, #db5f5f, #47b94771);  /* Light background for the cards */
+    border-radius: 10px;         /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    padding: 20px;               /* Padding inside the card */
+    margin-bottom: 20px;         /* Space between cards */
+    width: 100%;                 /* Cards take full width of their container */
+    text-align: center;          /* Center text inside cards */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .lesson-card:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+  }
+  
+  .lesson-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .lesson-card p {
+    font-size: 1rem;
+    color: #3030303d;
+  }
+  

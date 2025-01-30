@@ -1,0 +1,232 @@
+@import 'normalize.css';
+
+/* Existing styles */
+.login-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 0 50px;
+  color: white;
+  background-image: url('../assets/images/new_background.png'); /* Using relative path to the background image */
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -190px; /* Adjust top position */
+  margin-left: 40px; /* Adjust right position */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  margin: 0;                /* Remove any additional margin */
+}
+
+.welcome-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.welcome {
+  color: black;
+  font-size: 2rem;
+  margin-right: 80px;
+}
+
+.kiddoclass {
+  color: orange;
+  font-size: 3rem;
+  font-weight: bold;
+  display: inline-block; /* Ensures it behaves as an inline element while applying transformations */
+  animation: slideIn 1.5s ease-in-out infinite alternate; /* Increased duration for smoother effect */
+  margin-bottom: -100px;
+}
+
+.quotation {
+  font-size: 1rem; /* Smaller text for the quotation */
+  color: black; /* Black color */
+  margin-top: 60px;
+  margin-right: 20px; /* Adds spacing between the quote and KiddoClass */
+  margin-bottom: 100px;
+  margin-top: 100px;
+  text-align: center; /* Centers the quote */
+  display: inline-block; /* Ensures the quotation behaves like an inline element */
+  animation: fadeInSlide 2s ease-in-out infinite alternate; /* Animation for fading and sliding */
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-20px); /* Starting position */
+  }
+  50% {
+    transform: translateX(10px); /* Midway position */
+  }
+  100% {
+    transform: translateX(-20px); /* End position */
+  }
+}
+
+.right-section {
+  background: white; /* White background for login form */
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.small-input {
+  width: 80%;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+button[type="submit"] {
+  background-color: #007bff; /* Primary blue color */
+  color: white; /* Text color */
+  font-size: 1rem; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  padding: 12px 20px; /* Padding for button */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button[type="submit"]:active {
+  background-color: #004085; /* Even darker blue when pressed */
+  transform: scale(0.98); /* Slightly shrink when clicked */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+button[type="submit"]:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a blue glow */
+}
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Refined styling for the forgot password link */
+.forgot-password {
+  color: #6c757d; /* A professional, subtle gray color */
+  font-size: 14px; /* Slightly smaller text for a more polished look */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth color and underline transition */
+}
+
+.forgot-password:hover {
+  color: #0056b3; /* A darker blue on hover for a professional touch */
+  text-decoration: underline; /* Underline on hover for better user experience */
+}
+
+.link {
+  color: #007bff; /* Blue color for the link */
+  font-weight: bold; /* Make the text bold */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.link:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Optional: Adds space between the checkbox and the label */
+}
+
+.help-section {
+  margin-top: 10px;
+}
+
+.store-buttons img {
+  width: 120px;
+  margin: 10px 5px;
+}
+
+/* Toggle Button Styles */
+.toggle-container {
+  margin-top: 20px;
+}
+
+.toggle-label {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.toggle-checkbox {
+  width: 50px;
+  height: 25px;
+  background-color: #ddd;
+  border-radius: 50px;
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-checkbox:checked {
+  background-color: whitesmoke;
+}
+
+.toggle-checkbox:checked::before {
+  transform: translateX(25px);
+}
+
+.toggle-checkbox::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s;
+}

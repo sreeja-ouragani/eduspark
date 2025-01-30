@@ -1,0 +1,154 @@
+/* Home Page styles */
+.home-container {
+    display: flex;
+    justify-content: flex-start;  /* Align content to the left */
+    align-items: flex-start;      /* Align content to the top */
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column;       /* Stack items vertically */
+    position: absolute;           /* Position the container relative to the top-left corner */
+    top: 20;                       /* Align to the top */
+    left: 10;                      /* Align to the left */
+  }
+  
+  /* Home Page styles */
+  .home-content {
+    display: flex;
+    flex-direction: row;            /* Align items horizontally */
+    align-items: center;            /* Vertically align image and text */
+    margin-bottom: 20px;            /* Space between text/image and intro text */
+  }
+  
+  /* Welcome Text Styling */
+  .welcome-text {
+    font-size: 30px; /* Slightly smaller font size */
+    color: #286b2877; /* Lime green text */
+    font-weight: bold;
+    margin-right: 15px; /* Space between text and image */
+    line-height: 1.4;  /* Improve line height */
+  }
+  
+  /* Image Styling */
+  .home-image {
+    width: 100%;
+    max-width: 250px;   /* Reduce max width for image */
+    max-height: 100px;  /* Limit the height of the image */
+    border-radius: 15px;
+    margin: 0;          /* Remove any margin */
+    padding: 0;         /* Remove padding */
+  }
+  
+  /* Introduction Text */
+  .intro-text {
+    font-size: 18px;
+    color: #fd4828be;  /* Tomato red text */
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  
+  /* Buttons/Links */
+  button, .cta-link {
+    background-color: #176417a9;
+    color: white;
+    padding: 8px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  button:hover, .cta-link:hover {
+    background-color: #135a30d2;
+  }
+  
+  .cta-link {
+    display: inline-block;
+    margin-top: 20px; /* Reduced margin for compactness */
+  }
+  
+  
+  .cloud {
+    position: absolute;
+    top: 5%;
+    font-size: 200px;
+    color: #fff;
+    opacity: 0.6;
+    left: 40%;
+  }
+  .cloud2 {
+    position: absolute;
+    top: 5%;
+    font-size: 150px;
+    color: #fff;
+    opacity: 0.8;
+    right: 40%;
+  }
+  .cloud3 {
+    position: absolute;
+    top: 5%;
+    font-size: 200px;
+    color: #fff;
+    opacity: 0.9;
+    right: 55%;
+  }
+  
+  /* Flowers */
+  .flower {
+    position: absolute;
+    bottom: 50px;
+    font-size: 40px;
+    color: #e62f2f; /* Pink color for flowers */
+  }
+  
+  /* Butterfly */
+  .butterfly {
+    position: absolute;
+    font-size: 70px;
+    top: 50%;
+    right: 20%;
+    color: #ec412b;
+    opacity: 0.5; /* Soft red-orange color for butterfly */
+  }
+  
+  /* Welcome Text */
+  .welcome-text {
+    font-size: 3rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+    color: #3adb3a; /* Green color to match nature theme */
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 8%;
+    align-items: center;
+    z-index: 10;
+  }
+  .home-image {
+    margin-top: 20px;
+  }
+  /* Bunny Animation */
+  /* Bunny Animation */
+  .bunny {
+    position: absolute;
+    bottom: 190px;
+    left: 60%;
+    transform: translateX(-50%);
+    font-size: 70px;
+    color: #f1c40f; /* Yellow color for bunny */
+    animation: bunnyHop 2s ease-in-out infinite; /* Animation timing */
+  }
+  
+  /* Bunny Hop keyframes */
+  @keyframes bunnyHop {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-30px); /* Bunny jumps up */
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+  }

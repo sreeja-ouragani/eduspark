@@ -1,0 +1,188 @@
+.lessons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  background-color: #f9f9f9; /* Light background for better readability */
+  overflow-y: auto; /* Allow scrolling if content exceeds the viewport */
+}
+
+.folder-selection {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color:transparent; /* Background color for the fixed section */
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+  z-index: 10;
+  margin-top: 20px;
+}
+
+.folders {
+  display: flex;
+  gap: 15px;
+}
+
+.folder-item {
+  background: linear-gradient(135deg, #db5f5f, #47b94771);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.folder-item:hover {
+  transform: translateY(-5px);
+  background-color: #47b947; /* Vibrant green on hover */
+  color: #ffffff;
+}
+
+.folder-item.active {
+  background-color: #4CAF50; /* Highlight active folder */
+  color: #ffffff;
+}
+
+.instructions {
+  margin-top: 80px; /* Push below the fixed folder selection */
+  font-size: 1.2rem;
+  color: #666666;
+  text-align: center;
+}
+
+.error {
+  margin-top: 20px;
+  color: #ff4d4d; /* Red for error messages */
+  font-weight: bold;
+  text-align: center;
+}
+
+.lessons-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 80px; /* Account for fixed folder selection */
+  gap: 20px; /* Add spacing between video list and player */
+}
+
+.video-list {
+  flex: 1;
+  max-width: 48%; /* Adjust to maintain proportional width */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-right: 10px; /* Add spacing on the right */
+  overflow-y: auto; /* Enable scrolling if the list is long */
+  max-height: calc(100vh - 100px); /* Ensure the list fits within the viewport */
+  background-color: #f4f4f4; /* Light gray background to indicate space */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+.video-item {
+  background-color: pink;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+.video-item:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-3px);
+}
+
+.video-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color:black;
+  text-align: center;
+}
+/* Play button styles using SVG */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+}
+
+
+.play-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+.video-player {
+  flex: 1;
+  max-width: 48%; /* Adjust to maintain proportional width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-player video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #000000; /* Black background for videos */
+}
+
+.video-caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .lessons-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .video-list,
+  .video-player {
+    max-width: 100%;
+  }
+
+  .video-player video {
+    max-width: 100%;
+  }
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333; /* Dark color for visibility */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.video-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444; /* Ensure text is clearly visible */
+  text-align: center;
+  margin-top: 5px;
+}

@@ -1,0 +1,75 @@
+.fill-blank-quiz {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fill-blank-quiz h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.fill-blank-quiz .question {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ff6347; /* Bright color for question text */
+}
+
+.fill-blank-quiz input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.fill-blank-quiz input:focus {
+  border-color: #4CAF50;
+}
+
+.fill-blank-quiz button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fill-blank-quiz button:hover {
+  background-color: #45a049;
+}
+
+.fill-blank-quiz .correct {
+  color: green;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fill-blank-quiz .incorrect {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fill-blank-quiz button {
+  margin-top: 10px;
+  background-color: #007bff;
+}
+
+.fill-blank-quiz button:hover {
+  background-color: #0056b3;
+}
